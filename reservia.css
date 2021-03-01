@@ -38,6 +38,9 @@ body
 body
 {
     font-size: 16px;
+}
+
+:not(i){
     font-family: 'Raleway', sans-serif;
 }
 
@@ -99,8 +102,67 @@ header{
     padding-top: 45px;
 }
 
-
 /*Partie 2 : Recherche*/
+.message-guide{
+    margin-top: 35px;
+}
+
+.message-guide h2{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.message-guide p{
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.bar-search{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bar-search input{
+    width: 216px;
+    height: 25px;
+    border: 1px solid var(--color-third);
+    padding: 15px;
+}
+
+.bar-search input::placeholder{
+    font-weight: bolder;
+    color: black;
+    font-size: 1.2em;
+}
+
+.bar-search button{
+    padding: 0 19px;
+    background-color: var(--color-first);
+    color: white;
+    margin: 0;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 55px;
+}
+
+.logo-info{
+    background-color: var(--color-third);
+    padding: 0 15px;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 56px;
+    margin-left: 2px;
+}
+
+.logo-info a, .logo-info a:hover{
+    color: black;
+}
 
 /*Partie 3 : Filtre*/
 
