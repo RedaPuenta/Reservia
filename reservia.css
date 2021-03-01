@@ -1,11 +1,9 @@
 /* Calques et aide à la maquette (A SUPPRIMER A LA FIN !)*/
-*
-{
+*{
     border: none black 1px solid;
 }
 
-body
-{
+body{
     
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
     background-position: top;
@@ -16,8 +14,7 @@ body
 }
 
 @media screen and (max-width: 380px){
-    body
-    {
+    body{
         background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
         background-position: top;
         background-attachment: fixed;
@@ -35,8 +32,7 @@ body
 
 /*Style de base*/
 
-body
-{
+body{
     font-size: 16px;
 }
 
@@ -44,10 +40,15 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
-  }
+}
+
+a{
+    text-decoration: none;
+}
+
 
 /*Partie 1 : Navigation*/
 
@@ -56,20 +57,17 @@ header{
 }
 
 
-.nav-accueil
-{
+.nav-accueil{
     display: flex;
     justify-content: space-between;
 }
 
-.nav-rubrique ul 
-{
+.nav-rubrique ul{
     display: flex;
     list-style-type: none;
 }
 
-.nav-rubrique ul li 
-{
+.nav-rubrique ul li{
     padding-top: 45px;
 }
 
@@ -78,10 +76,9 @@ header{
     font-weight: 500;
     font-size: 1.1em;
     padding: 0 32px;
-    text-decoration: none;
 }
 
-.nav-rubrique ul li:last-child a {
+.nav-rubrique ul li:last-child a{
     color: var(--color-first)
 }
 
@@ -113,7 +110,6 @@ header{
 }
 
 .message-guide p{
-    font-weight: 500;
     margin-top: 10px;
 }
 
@@ -139,13 +135,15 @@ header{
 .bar-search button{
     padding: 0 19px;
     background-color: var(--color-first);
-    color: white;
-    margin: 0;
     border: none;
     border-radius: 0 20px 20px 0;
     font-weight: bold;
     font-size: 1.2em;
     height: 55px;
+}
+
+.bar-search button a{
+    color: white;
 }
 
 .logo-info{
@@ -165,6 +163,81 @@ header{
 }
 
 /*Partie 3 : Filtre*/
+.perso-icon{
+    color: var(--color-first);
+}
+
+.section-filtre ul{
+    display: flex;
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.section-filtre li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border: 3px solid var(--color-third);
+    border-radius: 30px;
+}
+
+.section-filtre li:first-child{
+    border: none;
+}
+
+.section-filtre li:first-child p{
+    padding-left: 10px;
+}
+
+.section-filtre li p{
+    padding: 0px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.filtre-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-second);
+    border-radius: 100%;
+    margin: -3px;
+}
+
+.filtre-item i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.filtre-remarque{
+    display: flex;
+    margin-top: 40px;
+}
+
+.filtre-remarque p{
+    font-size: 1.05em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.info-remarque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 5px;
+    border: 1px solid var(--color-third);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
 
 /*Partie 4 : Hébergement et Populaire*/
 
