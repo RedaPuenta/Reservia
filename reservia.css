@@ -41,7 +41,64 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 /*Partie 1 : Navigation*/
+
+header{
+    padding: 0 3.5%;
+}
+
+
+.nav-accueil
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-rubrique ul 
+{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-rubrique ul li 
+{
+    padding-top: 45px;
+}
+
+.nav-rubrique ul li a{
+    color: black;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 0 32px;
+    text-decoration: none;
+}
+
+.nav-rubrique ul li:last-child a {
+    color: var(--color-first)
+}
+
+.nav-rubrique ul li a:hover{
+    color: var(--color-first)
+}
+
+.nav-rubrique ul li:hover{
+    border-top: 3px solid var(--color-first);
+    padding-top: 42px;
+}
+
+.nav-rubrique ul li:hover a{
+    color: var(--color-first);
+}
+
+.nav-logo{
+    padding-top: 45px;
+}
+
 
 /*Partie 2 : Recherche*/
 
