@@ -1,0 +1,54 @@
+/* Calques et aide à la maquette (A SUPPRIMER A LA FIN !)*/
+*
+{
+    border: none black 1px solid;
+}
+
+body
+{
+    
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 9000px;
+    
+}
+
+@media screen and (max-width: 380px){
+    body
+    {
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 9000px;
+    }
+}
+
+/*Variable*/
+:root{
+    --color-first: #0065FC;      /*Blue*/
+    --color-second: #DEEBFF;     /*Blue light*/
+    --color-third: #F2F2F2;      /*Grey*/
+}
+
+/*Style de base*/
+
+body
+{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*Partie 1 : Navigation*/
+
+/*Partie 2 : Recherche*/
+
+/*Partie 3 : Filtre*/
+
+/*Partie 4 : Hébergement et Populaire*/
+
+/*Partie 5 : Activités*/
+
+/*Partie 6 : Pied de page*/
