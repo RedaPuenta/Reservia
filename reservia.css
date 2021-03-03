@@ -1,18 +1,15 @@
-/* Calques de la maqeuette et aide au développement (A SUPPRIMER A LA FIN !)*/
-*{
-    border: none black 1px solid;
-}
+/***Calques de la maquette et aide au développement (A SUPPRIMER A LA FIN !)***/
 /*
 body{
     
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 35%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
+    background-position: 50% 90%;
     background-attachment: fixed;
     background-size: cover;
     height: 9000px;
     
 }
-*/
+
 @media screen and (max-width: 380px){
     body{
         background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
@@ -23,11 +20,11 @@ body{
     }
 }
 
-.hebergement-card .content-image,.popular-card .content-image{
-    border: black 1px solid;
+*{
+    border: none black 1px solid;
 }
-
-/*Variable*/
+*/
+/***Variable***/
 :root{
     --color-first: #0065FC;      /*Blue*/
     --color-second: #DEEBFF;     /*Blue light*/
@@ -35,7 +32,7 @@ body{
     --background-card: white;
 }
 
-/*Style de fondation et directives générales*/
+/***Style de fondation et directives générales***/
 
 body{
     font-size: 16px;
@@ -50,7 +47,8 @@ body{
     padding: 0;
 }
 
-a{
+a, a:hover, a:active{
+    color: black;
     text-decoration: none;
 }
 
@@ -64,7 +62,38 @@ header, main{
     font-size: 1.5em;
 }
 
-/*Partie 1 : Navigation*/
+/***Directives communes pour les CARD***/
+/*Image des CARD*/
+img[class*="card-control-"]{
+    object-fit: cover;
+}
+/*Titre des CARD*/
+.title-card{
+    font-weight: bold;
+    font-size: 1.05em;
+}
+/*Texte des CARD*/
+.content-description p{
+    font-size: 0.9em;
+}
+
+.content-description p span{
+    font-weight: bold;
+}
+/*Etoiles des CARD*/
+.review-stars{
+    color: var(--color-first)
+}
+
+.star-less{
+    color: rgb(230, 230, 230);
+}
+/*Couleur de fond des CARD*/
+.hebergement-card, .popular-card, div[class*=activite-card-special-]{
+    background-color: var(--background-card);
+}
+
+/***Partie 1 : Navigation***/
 /*Style pour la partie "navigation*/
 .nav-accueil{
     display: flex;
@@ -81,16 +110,13 @@ header, main{
 }
 
 .nav-rubrique ul li a{
-    color: black;
     font-weight: 500;
     font-size: 1.1em;
     padding: 0 32px;
 }
 
-.nav-rubrique ul li:last-child a{
-    color: var(--color-first)
-}
-
+.nav-rubrique ul li:last-child a, 
+.nav-rubrique ul li:hover a,
 .nav-rubrique ul li a:hover{
     color: var(--color-first)
 }
@@ -100,15 +126,11 @@ header, main{
     padding-top: 42px;
 }
 
-.nav-rubrique ul li:hover a{
-    color: var(--color-first);
-}
-
 .nav-logo{
     padding-top: 45px;
 }
 
-/*Partie 2 : Recherche*/
+/***Partie 2 : Recherche***/
 /*Style style pour la partie "recherche"*/
 .message-guide{
     margin-top: 35px;
@@ -169,11 +191,7 @@ header, main{
     margin-left: 2px;
 }
 
-.logo-info a, .logo-info a:hover{
-    color: black;
-}
-
-/*Partie 3 : Filtre*/
+/***Partie 3 : Filtre***/
 /*Style pour la partie "filtre"*/
 .perso-icon{
     color: var(--color-first);
@@ -251,14 +269,8 @@ header, main{
     border-radius: 100%;
 }
 
-/*Partie 4 : Hébergement et Populaire*/
-/*Directives pour les CARD*/
-
-.separa{
-    display: flex;
-    justify-content: space-between;
-}
-
+/***Partie 4 : Hébergement et Populaire***/
+/*Style commun entre la partie "hebergement" et "populaire"*/
 .hebergement-part, .popular-part{
     margin-top: 40px;
     background-color: var(--color-third);
@@ -266,87 +278,20 @@ header, main{
     border-radius: 20px;
 }
 
-.hebergement-card, .popular-card{
-    background-color: var(--background-card);
+.separa{
+    display: flex;
+    justify-content: space-between;
 }
 
-.title-card{
-    font-weight: bold;
-    font-size: 1.05em;
-}
+/*Style pour la partie "hebergement"*/
 
-.card-row{
+.hebergement-part .card-row{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.content-description p{
-    font-size: 0.9em;
-}
-
-.content-description p span{
-    font-weight: bold;
-}
-
-.review-stars{
-    color: var(--color-first)
-}
-
-/*Controler la position des images à l'intérieur des CARDS*/
-
-.card-control-1, .card-control-2, .card-control-3{
-    object-fit: cover;
-    object-position: 0 -28px;
-    width: 105%;
-    height: 100%;
-}
-
-.card-control-4{
-    object-fit: cover;
-    object-position: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.card-control-5{
-    object-fit: cover;
-    object-position: -7px -12px;
-    width: 105%;
-    height: 100%;
-}
-
-.card-control-6{
-    object-fit: cover;
-    object-position: -5px -135px;
-    width: 104%;
-    height: 100%;
-}
-
-.card-control-7{
-    width: 170%;
-    height: 100%;
-    object-fit: cover;
-    object-position: -47px -5px;
-}
-
-.card-control-8{
-    width: 150%;
-    height: 100%;
-    object-fit: cover;
-    object-position: -35px -5px;
-}
-
-.card-control-9{
-    width: 110%;
-    height: 100%;
-    object-fit: cover;
-    object-position: -10px -40px;
-}
-
-/*Style pour la partie "hebergement"*/
-
-.hebergement-part .hebergement-card{
+.hebergement-card{
     width: 250px;
     height: 200px;
     border-radius: 20px;
@@ -356,11 +301,11 @@ header, main{
     padding: 5px;
 }
 
-.hebergement-part .card-row .hebergement-card:nth-of-type(2){
+.hebergement-card:nth-of-type(2){
     margin: 0 33px;
 }
 
-.hebergement-part .hebergement-card .content-image{
+.hebergement-card .content-image{
     text-align: center;
     width: 100%;
     height: 120px;
@@ -368,15 +313,15 @@ header, main{
     overflow: hidden;
 }
 
-.hebergement-part .hebergement-card .content-description{
+.hebergement-card .content-description{
     margin: 8px 0 0 12px;
 }
 
-.hebergement-part .hebergement-card .content-description p{
+.hebergement-card .content-description p{
     margin-top: 5px;
 }
 
-.hebergement-part .hebergement-card .review-stars{
+.hebergement-card .review-stars{
     margin-top: 4px;
 }
 
@@ -386,33 +331,31 @@ header, main{
 }
 
 .hebergement-part .more-information a{
-    color:black;
     font-weight: bold;
 }
 
 /*Style pour la partie "populaire"*/
 
-.popular-part .popular-more a, .popular-more a:hover{
-    color: black;
+.popular-part .card-row{
+    display: flex;
+    flex-direction: column;
 }
 
-.popular-part .popular-title{
+.popular-title{
     display: flex;
     justify-content: space-between;
 }
 
-.popular-part .popular-card{
+.popular-card{
     display: flex;
     align-items: center;
-    background-color: white;
     width: 355px;
     height: 140px;
     border-radius: 20px;
     padding: 5px;
 }
 
-.popular-part .popular-card .content-image{
-    text-align: center;
+.popular-card .content-image{
     width:  135px;
     height: 100%;
     border-radius: 20px 0px 0 20px;
@@ -420,29 +363,188 @@ header, main{
     margin-right: 20px;
 }
 
-.popular-part .popular-card .content-description{
+.popular-card .content-description{
     margin-top: 8px;
     width: 160px;
 }
 
-.popular-part .popular-card .content-description p{
+.popular-card .content-description p{
     margin-top: 8px;
 }
 
-.popular-part .popular-card .review-stars{
+.popular-card .review-stars{
     margin-top: 35px;
 }
 
-
-.popular-part .card-row .popular-card:nth-of-type(2){
+.popular-card:nth-of-type(2){
     margin: 38px 0;
 }
 
-.popular-part .card-row{
+/*Controler la position des images à l'intérieur des CARDS*/
+/*#Hebergement*/
+.card-control-1, .card-control-2, .card-control-3{
+    object-position: 0 -28px;
+    width: 105%;
+    height: 100%;
+}
+
+.card-control-4{
+    object-position: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-5{
+    object-position: -7px -12px;
+    width: 105%;
+    height: 100%;
+}
+
+.card-control-6{
+    object-position: -5px -135px;
+    width: 104%;
+    height: 100%;
+}
+/*#Populaire*/
+.card-control-7{
+    object-position: -47px -5px;
+    width: 170%;
+    height: 100%;
+}
+
+.card-control-8{
+    object-position: -35px -5px;
+    width: 150%;
+    height: 100%;
+}
+
+.card-control-9{
+    object-position: -10px -40px;
+    width: 110%;
+    height: 100%;
+}
+
+/***Partie 5 : Activités***/
+/*Style pour la partie "activités"*/
+.separa2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activite-part{
+    margin-top: 60px;
+    width: 100%;
+}
+
+.activite-part .card-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div[class*=activite-card-special-]{
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
 }
 
-/*Partie 5 : Activités*/
+div[class*=activite-card-special-] .content-image{
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.activite-card-special-1{
+    width: 318px;
+    height: 470px;
+}
+
+.activite-card-special-1 .content-image{
+    width: 100%;
+    height: 410px;
+}
+
+.activite-card-special-2{
+    width: 318px;
+    height: 250px;
+}
+
+.activite-card-special-2 .content-image{
+    width: 100%;
+    height: 190px;
+}
+
+.activite-card-special-3{
+    width: 318px;
+    height: 172px;
+}
+
+.activite-card-special-3 .content-image{
+    width: 100%;
+    height: 113px;
+}
+
+.activite-card-special-4{
+    width: 318px;
+    height: 205px;
+}
+
+.activite-card-special-4 .content-image{
+    width: 100%;
+    height: 149px;
+}
+
+.activite-card-special-5{
+    width: 318px;
+    height: 220px;
+}
+
+.activite-card-special-5 .content-image{
+    width: 100%;
+    height: 160px;
+}
+
+.activite-part .content-description .title-card{
+    padding: 22px 0px 0px 17px;
+}
+
+/*Controler la position des images à l'intérieur des CARDS*/
+/*#Activités*/
+.card-control-10{
+    object-position: -200px -20px;
+    width: 120%;
+    height: 120%;
+}
+
+.card-control-11{
+    object-position: 0px -117px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-12{
+    object-position: 0px -20px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-13{
+    object-position: -197px -5px;
+    width: 115%;
+    height: 115%;
+}
+
+.card-control-14{
+    object-position: 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-15{
+    object-position: 0px -11px;
+    width: 100%;
+    height: 100%;
+}
 
 /*Partie 6 : Pied de page*/
