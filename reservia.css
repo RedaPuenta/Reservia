@@ -3,10 +3,9 @@
 body{
     
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 90%;
+    background-position: 50% 100%;
     background-attachment: fixed;
     background-size: cover;
-    height: 9000px;
     
 }
 
@@ -60,6 +59,10 @@ header, main{
     margin-bottom: 25px;
     font-weight: bold;
     font-size: 1.5em;
+}
+
+.hebergement-part, .popular-part, .logo-info, .footer{
+    background-color: var(--color-third);
 }
 
 /***Directives communes pour les CARD***/
@@ -180,7 +183,6 @@ img[class*="card-control-"]{
 
 .logo-info{
     border: var(--color-third) 1px solid;
-    background-color: var(--color-third);
     padding: 0 15px;
     border-radius: 20px 0 0 20px;
     display: flex;
@@ -273,7 +275,6 @@ img[class*="card-control-"]{
 /*Style commun entre la partie "hebergement" et "populaire"*/
 .hebergement-part, .popular-part{
     margin-top: 40px;
-    background-color: var(--color-third);
     padding: 40px;
     border-radius: 20px;
 }
@@ -547,4 +548,31 @@ div[class*=activite-card-special-] .content-image{
     height: 100%;
 }
 
-/*Partie 6 : Pied de page*/
+/***Partie 6 : Pied de page***/
+/*Style pour la partie "pied de page"*/
+
+.footer{
+    margin-top: 67px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 40px;
+}
+
+.foot-column{
+    padding: 43px 0 50px 10px;
+    width: 100%;
+}
+
+.title-footer{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.foot-column p{
+    line-height: 0.9em;
+}
+
+.foot-column p a:hover{
+    color: var(--color-first);
+}
