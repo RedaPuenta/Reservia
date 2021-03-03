@@ -1,18 +1,18 @@
-/* Calques et aide à la maquette (A SUPPRIMER A LA FIN !)*/
+/* Calques de la maqeuette et aide au développement (A SUPPRIMER A LA FIN !)*/
 *{
     border: none black 1px solid;
 }
-
+/*
 body{
     
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: top;
+    background-position: 50% 35%;
     background-attachment: fixed;
     background-size: cover;
     height: 9000px;
     
 }
-
+*/
 @media screen and (max-width: 380px){
     body{
         background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
@@ -23,14 +23,19 @@ body{
     }
 }
 
+.hebergement-card .content-image,.popular-card .content-image{
+    border: black 1px solid;
+}
+
 /*Variable*/
 :root{
     --color-first: #0065FC;      /*Blue*/
     --color-second: #DEEBFF;     /*Blue light*/
     --color-third: #F2F2F2;      /*Grey*/
+    --background-card: white;
 }
 
-/*Style de base*/
+/*Style de fondation et directives générales*/
 
 body{
     font-size: 16px;
@@ -49,14 +54,18 @@ a{
     text-decoration: none;
 }
 
-
-/*Partie 1 : Navigation*/
-
-header{
+header, main{
     padding: 0 3.5%;
 }
 
+.title-hpa{
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
 
+/*Partie 1 : Navigation*/
+/*Style pour la partie "navigation*/
 .nav-accueil{
     display: flex;
     justify-content: space-between;
@@ -100,6 +109,7 @@ header{
 }
 
 /*Partie 2 : Recherche*/
+/*Style style pour la partie "recherche"*/
 .message-guide{
     margin-top: 35px;
 }
@@ -139,7 +149,7 @@ header{
     border-radius: 0 20px 20px 0;
     font-weight: bold;
     font-size: 1.2em;
-    height: 55px;
+    height: 57px;
 }
 
 .bar-search button a{
@@ -147,6 +157,7 @@ header{
 }
 
 .logo-info{
+    border: var(--color-third) 1px solid;
     background-color: var(--color-third);
     padding: 0 15px;
     border-radius: 20px 0 0 20px;
@@ -163,6 +174,7 @@ header{
 }
 
 /*Partie 3 : Filtre*/
+/*Style pour la partie "filtre"*/
 .perso-icon{
     color: var(--color-first);
 }
@@ -240,6 +252,196 @@ header{
 }
 
 /*Partie 4 : Hébergement et Populaire*/
+/*Directives pour les CARD*/
+
+.separa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergement-part, .popular-part{
+    margin-top: 40px;
+    background-color: var(--color-third);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.hebergement-card, .popular-card{
+    background-color: var(--background-card);
+}
+
+.title-card{
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.card-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.content-description p{
+    font-size: 0.9em;
+}
+
+.content-description p span{
+    font-weight: bold;
+}
+
+.review-stars{
+    color: var(--color-first)
+}
+
+/*Controler la position des images à l'intérieur des CARDS*/
+
+.card-control-1, .card-control-2, .card-control-3{
+    object-fit: cover;
+    object-position: 0 -28px;
+    width: 105%;
+    height: 100%;
+}
+
+.card-control-4{
+    object-fit: cover;
+    object-position: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-5{
+    object-fit: cover;
+    object-position: -7px -12px;
+    width: 105%;
+    height: 100%;
+}
+
+.card-control-6{
+    object-fit: cover;
+    object-position: -5px -135px;
+    width: 104%;
+    height: 100%;
+}
+
+.card-control-7{
+    width: 170%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -47px -5px;
+}
+
+.card-control-8{
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -35px -5px;
+}
+
+.card-control-9{
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -10px -40px;
+}
+
+/*Style pour la partie "hebergement"*/
+
+.hebergement-part .hebergement-card{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 5px;
+}
+
+.hebergement-part .card-row .hebergement-card:nth-of-type(2){
+    margin: 0 33px;
+}
+
+.hebergement-part .hebergement-card .content-image{
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.hebergement-part .hebergement-card .content-description{
+    margin: 8px 0 0 12px;
+}
+
+.hebergement-part .hebergement-card .content-description p{
+    margin-top: 5px;
+}
+
+.hebergement-part .hebergement-card .review-stars{
+    margin-top: 4px;
+}
+
+.hebergement-part .more-information{
+    padding: 10px 0 10px 2px;
+    font-size: 1.2em;
+}
+
+.hebergement-part .more-information a{
+    color:black;
+    font-weight: bold;
+}
+
+/*Style pour la partie "populaire"*/
+
+.popular-part .popular-more a, .popular-more a:hover{
+    color: black;
+}
+
+.popular-part .popular-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-part .popular-card{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 355px;
+    height: 140px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.popular-part .popular-card .content-image{
+    text-align: center;
+    width:  135px;
+    height: 100%;
+    border-radius: 20px 0px 0 20px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.popular-part .popular-card .content-description{
+    margin-top: 8px;
+    width: 160px;
+}
+
+.popular-part .popular-card .content-description p{
+    margin-top: 8px;
+}
+
+.popular-part .popular-card .review-stars{
+    margin-top: 35px;
+}
+
+
+.popular-part .card-row .popular-card:nth-of-type(2){
+    margin: 38px 0;
+}
+
+.popular-part .card-row{
+    display: flex;
+    flex-direction: column;
+}
 
 /*Partie 5 : Activités*/
 
