@@ -3,7 +3,7 @@
 body{
     
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 100%;
+    background-position: 50% 0%;
     background-attachment: fixed;
     background-size: cover;
     
@@ -46,12 +46,15 @@ body{
     padding: 0;
 }
 
-a, a:hover, a:active{
+a, 
+a:hover, 
+a:active{
     color: black;
     text-decoration: none;
 }
 
-header, main{
+header, 
+main{
     padding: 0 3.5%;
 }
 
@@ -61,7 +64,10 @@ header, main{
     font-size: 1.5em;
 }
 
-.hebergement-part, .popular-part, .logo-info, .footer{
+.hebergement-part, 
+.popular-part, 
+.logo-info, 
+.footer{
     background-color: var(--color-third);
 }
 
@@ -92,7 +98,9 @@ img[class*="card-control-"]{
     color: rgb(230, 230, 230);
 }
 /*Couleur de fond des CARD*/
-.hebergement-card, .popular-card, div[class*=activite-card-special-]{
+.hebergement-card, 
+.popular-card, 
+div[class*=activite-card-special-]{
     background-color: var(--background-card);
 }
 
@@ -108,14 +116,11 @@ img[class*="card-control-"]{
     list-style-type: none;
 }
 
-.nav-rubrique ul li{
-    padding-top: 45px;
-}
-
 .nav-rubrique ul li a{
+    display: inline-block;
     font-weight: 500;
     font-size: 1.1em;
-    padding: 0 32px;
+    padding: 45px 32px 0 32px;
 }
 
 .nav-rubrique ul li:last-child a, 
@@ -124,7 +129,7 @@ img[class*="card-control-"]{
     color: var(--color-first)
 }
 
-.nav-rubrique ul li:hover{
+.nav-rubrique ul a:hover{
     border-top: 3px solid var(--color-first);
     padding-top: 42px;
 }
@@ -139,7 +144,7 @@ img[class*="card-control-"]{
     margin-top: 35px;
 }
 
-.message-guide h2{
+.message-guide .message-guide-title{
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -159,25 +164,28 @@ img[class*="card-control-"]{
     height: 25px;
     border: 1px solid var(--color-third);
     padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .bar-search input::placeholder{
     font-weight: bolder;
-    color: black;
-    font-size: 1.2em;
+    color: rgb(145, 145, 145);
+    font-size: 1em;
+    font-weight: 700;
 }
 
 .bar-search button{
-    padding: 0 19px;
     background-color: var(--color-first);
     border: none;
     border-radius: 0 20px 20px 0;
     font-weight: bold;
     font-size: 1.2em;
     height: 57px;
+    width: 146px;
 }
 
-.bar-search button a{
+.bar-search button span{
     color: white;
 }
 
@@ -212,6 +220,12 @@ img[class*="card-control-"]{
     margin-right: 20px;
     border: 3px solid var(--color-third);
     border-radius: 30px;
+}
+
+.section-filtre li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-filtre li:first-child{
@@ -273,18 +287,23 @@ img[class*="card-control-"]{
 
 /***Partie 4 : Hébergement et Populaire***/
 /*Style commun entre la partie "hebergement" et "populaire"*/
-.hebergement-part, .popular-part{
+.hebergement-part, 
+.popular-part{
     margin-top: 40px;
     padding: 40px;
     border-radius: 20px;
 }
 
-.separa{
+.hebergement-separa{
     display: flex;
     justify-content: space-between;
 }
 
 /*Style pour la partie "hebergement"*/
+
+.hebergement-part{
+    width: 846px;
+}
 
 .hebergement-part .card-row{
     display: flex;
@@ -300,10 +319,6 @@ img[class*="card-control-"]{
     flex-direction: column;
     align-content: center;
     padding: 5px;
-}
-
-.hebergement-card:nth-of-type(2){
-    margin: 0 33px;
 }
 
 .hebergement-card .content-image{
@@ -335,11 +350,23 @@ img[class*="card-control-"]{
     font-weight: bold;
 }
 
+.hebergement-part .more-information a:hover{
+    color: var(--color-first);
+}
+
 /*Style pour la partie "populaire"*/
+
+.popular-part{
+    width: 365px;
+    height: 579px;
+}
 
 .popular-part .card-row{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 526px;
 }
 
 .popular-title{
@@ -357,7 +384,7 @@ img[class*="card-control-"]{
 }
 
 .popular-card .content-image{
-    width:  135px;
+    width: 135px;
     height: 100%;
     border-radius: 20px 0px 0 20px;
     overflow: hidden;
@@ -377,13 +404,11 @@ img[class*="card-control-"]{
     margin-top: 35px;
 }
 
-.popular-card:nth-of-type(2){
-    margin: 38px 0;
-}
-
 /*Controler la position des images à l'intérieur des CARDS*/
 /*#Hebergement*/
-.card-control-1, .card-control-2, .card-control-3{
+.card-control-1, 
+.card-control-2, 
+.card-control-3{
     object-position: 0 -28px;
     width: 105%;
     height: 100%;
@@ -427,7 +452,7 @@ img[class*="card-control-"]{
 
 /***Partie 5 : Activités***/
 /*Style pour la partie "activités"*/
-.separa2{
+.activite-separa{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -575,4 +600,91 @@ div[class*=activite-card-special-] .content-image{
 
 .foot-column p a:hover{
     color: var(--color-first);
+}
+
+/***EFFET, TRANSITION, ANIMATION***/
+
+/*Ombre (pour les CARD)*/
+.hebergement-card, 
+.popular-card, 
+div[class*=activite-card-special-]{
+    box-shadow: 0 0 20px rgba(0,0,0,.25)
+}
+
+/*Espacement des lettres au passge de la souris (pour les liens)*/
+footer a{
+    transition: letter-spacing 0.5s ease-out;
+}
+
+footer a:hover{
+    letter-spacing: 1px;
+}
+
+/*Zoom et effets de lumières (pour certains éléments)*/
+.hebergement-card, 
+.popular-card, 
+div[class*=activite-card-special-], 
+.section-filtre ul li:not(:first-child), 
+.logo-info i, 
+.info-remarque{
+    transition: transform 0.4s ease-out, animation 0.4s;
+}
+
+.hebergement-card:hover, 
+.popular-card:hover, 
+div[class*=activite-card-special-]:hover, 
+.section-filtre li:not(:first-child):hover, 
+.logo-info:hover i, 
+.info-remarque:hover{
+    transform: scale(1.1);
+}
+
+.hebergement-card:hover img[class*=card-control],
+.popular-card:hover img[class*=card-control],
+div[class*=activite-card-special-]:hover img[class*=card-control]{
+    animation: forcard 1s;
+}
+
+@keyframes forcard{
+    20%{
+        filter: brightness(1);
+    }
+    50%{
+        filter: brightness(2);
+    }
+}
+
+/*Décalage du block au passage de la souris (pour l'icone de la partie "Populaire")*/
+.popular-more a i{
+    transition: transform 0.5s ease-out;
+}
+
+.popular-more a i:hover{
+    transform: translate(5px, -5px);
+}
+/*Petite ombre autour du texte (pour le lien dans la partie "Hebergement")*/
+
+.hebergement-part .more-information a{
+    transition: text-shadow 0.5s linear;
+}
+
+.hebergement-part .more-information a:hover{
+    text-shadow: 0px 0px 1px var(--color-first);
+}
+
+/*Eclaircicement du boutton au passage de la souris (pour la partie "Rechercher")*/
+.bar-search button:hover{
+    filter: brightness(1.3);
+    cursor: pointer;
+}
+
+/*Effet d'enfoncement du boutton au passage de la souris (pour la partie "Rechercher")*/
+.bar-search button:active{
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+/*Ombre interne des filtres au passage de la souris (pour la partie "Filtre")*/
+.section-filtre li:not(:first-child):hover{
+    box-shadow: inset -2px -2px 5px var(--color-third), inset 2px 2px 5px var(--color-third);
 }
