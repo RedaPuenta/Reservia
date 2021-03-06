@@ -100,7 +100,7 @@ img[class*="card-control-"]{
 /*Couleur de fond des CARD*/
 .hebergement-card, 
 .popular-card, 
-div[class*=activite-card-special-]{
+article[class*=activite-card-special-]{
     background-color: var(--background-card);
 }
 
@@ -294,7 +294,7 @@ div[class*=activite-card-special-]{
     border-radius: 20px;
 }
 
-.hebergement-separa{
+.hebergement-popular-separa{
     display: flex;
     justify-content: space-between;
 }
@@ -312,9 +312,12 @@ div[class*=activite-card-special-]{
 }
 
 .hebergement-card{
+    border-radius: 20px;
+}
+
+.hebergement-card a{
     width: 250px;
     height: 200px;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -375,11 +378,14 @@ div[class*=activite-card-special-]{
 }
 
 .popular-card{
+    border-radius: 20px;
+}
+
+.popular-card a{
     display: flex;
     align-items: center;
     width: 355px;
     height: 140px;
-    border-radius: 20px;
     padding: 5px;
 }
 
@@ -470,13 +476,13 @@ div[class*=activite-card-special-]{
     justify-content: space-between;
 }
 
-div[class*=activite-card-special-]{
+article[class*=activite-card-special-]{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
 }
 
-div[class*=activite-card-special-] .content-image{
+article[class*=activite-card-special-] .content-image{
     border-radius: 20px 20px 0 0;
     overflow: hidden;
 }
@@ -607,7 +613,7 @@ div[class*=activite-card-special-] .content-image{
 /*Ombre (pour les CARD)*/
 .hebergement-card, 
 .popular-card, 
-div[class*=activite-card-special-]{
+article[class*=activite-card-special-]{
     box-shadow: 0 0 20px rgba(0,0,0,.25)
 }
 
@@ -623,7 +629,7 @@ footer a:hover{
 /*Zoom et effets de lumières (pour certains éléments)*/
 .hebergement-card, 
 .popular-card, 
-div[class*=activite-card-special-], 
+article[class*=activite-card-special-], 
 .section-filtre ul li:not(:first-child), 
 .logo-info i, 
 .info-remarque{
@@ -632,7 +638,7 @@ div[class*=activite-card-special-],
 
 .hebergement-card:hover, 
 .popular-card:hover, 
-div[class*=activite-card-special-]:hover, 
+article[class*=activite-card-special-]:hover, 
 .section-filtre li:not(:first-child):hover, 
 .logo-info:hover i, 
 .info-remarque:hover{
@@ -641,7 +647,7 @@ div[class*=activite-card-special-]:hover,
 
 .hebergement-card:hover img[class*=card-control],
 .popular-card:hover img[class*=card-control],
-div[class*=activite-card-special-]:hover img[class*=card-control]{
+article[class*=activite-card-special-]:hover img[class*=card-control]{
     animation: forcard 1s;
 }
 
