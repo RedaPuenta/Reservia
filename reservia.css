@@ -301,14 +301,14 @@ article[class*=activite-card-special-]{
 
 /*Style pour la partie "hebergement"*/
 
-.hebergement-part{
-    width: 846px;
-}
-
 .hebergement-part .card-row{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+}
+
+.hebergement-part .card-row .hebergement-card:nth-child(2){
+    margin: 0 33px;
 }
 
 .hebergement-card{
@@ -358,11 +358,6 @@ article[class*=activite-card-special-]{
 }
 
 /*Style pour la partie "populaire"*/
-
-.popular-part{
-    width: 365px;
-    height: 579px;
-}
 
 .popular-part .card-row{
     display: flex;
@@ -415,7 +410,7 @@ article[class*=activite-card-special-]{
 .card-control-1, 
 .card-control-2, 
 .card-control-3{
-    object-position: 0 -28px;
+    object-position: 0 50%;
     width: 105%;
     height: 100%;
 }
@@ -427,33 +422,33 @@ article[class*=activite-card-special-]{
 }
 
 .card-control-5{
-    object-position: -7px -12px;
+    object-position: calc(100% - 7px) 50%;
     width: 105%;
-    height: 100%;
+    height: 105%;
 }
 
 .card-control-6{
-    object-position: -5px -135px;
-    width: 104%;
-    height: 100%;
+    object-position: calc(50% - 5px) 52%;
+    width: 105%;
+    height: 105%;
 }
 /*#Populaire*/
 .card-control-7{
-    object-position: -47px -5px;
-    width: 170%;
-    height: 100%;
+    object-position: 55% 60%;
+    width: 110%;
+    height: 110%;
 }
 
 .card-control-8{
-    object-position: -35px -5px;
-    width: 150%;
-    height: 100%;
+    object-position: 60% calc(50% - 5px);
+    width: 110%;
+    height: 110%;
 }
 
 .card-control-9{
-    object-position: -10px -40px;
+    object-position: calc(50% - 12px) 70%;
     width: 110%;
-    height: 100%;
+    height: 110%;
 }
 
 /***Partie 5 : Activités***/
@@ -480,65 +475,37 @@ article[class*=activite-card-special-]{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    width: 318px;
 }
 
 article[class*=activite-card-special-] .content-image{
     border-radius: 20px 20px 0 0;
     overflow: hidden;
-}
-
-.activite-card-special-1{
-    width: 318px;
-    height: 470px;
+    width: 100%;
 }
 
 .activite-card-special-1 .content-image{
-    width: 100%;
     height: 410px;
 }
 
-.activite-card-special-2{
-    width: 318px;
-    height: 250px;
-}
-
 .activite-card-special-2 .content-image{
-    width: 100%;
     height: 190px;
 }
 
-.activite-card-special-3{
-    width: 318px;
-    height: 172px;
-}
-
 .activite-card-special-3 .content-image{
-    width: 100%;
     height: 113px;
 }
 
-.activite-card-special-4{
-    width: 318px;
-    height: 205px;
-}
-
 .activite-card-special-4 .content-image{
-    width: 100%;
     height: 149px;
 }
 
-.activite-card-special-5{
-    width: 318px;
-    height: 220px;
-}
-
 .activite-card-special-5 .content-image{
-    width: 100%;
     height: 160px;
 }
 
 .activite-part .content-description .title-card{
-    padding: 22px 0px 0px 17px;
+    padding: 20px 17px;
 }
 
 /*Controler la position des images à l'intérieur des CARDS*/
