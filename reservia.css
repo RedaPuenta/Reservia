@@ -1,9 +1,9 @@
-/***Calques de la maquette et aide au développement (A SUPPRIMER A LA FIN !)***/
+/***CALQUES DE LA MAQUETTE ET AIDE AU DEVELOPPEMENT (A SUPPRIMER A LA FIN !)***/
 /*
 body{
     
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% 75%;
     background-attachment: fixed;
     background-size: cover;
     
@@ -18,12 +18,12 @@ body{
         height: 9000px;
     }
 }
-
+*/
 *{
     border: none black 1px solid;
 }
-*/
-/***Variable***/
+
+/***VARIABLES***/
 :root{
     --color-first: #0065FC;      /*Blue*/
     --color-second: #DEEBFF;     /*Blue light*/
@@ -31,7 +31,7 @@ body{
     --background-card: white;
 }
 
-/***Style de fondation et directives générales***/
+/***STYLE DE FONDATION ET DIRECTIVE GENERALES***/
 
 body{
     font-size: 16px;
@@ -71,7 +71,7 @@ main{
     background-color: var(--color-third);
 }
 
-/***Directives communes pour les CARD***/
+/***DIRECTIVES COMMUNES POUR LES CARD***/
 /*Image des CARD*/
 img[class*="card-control-"]{
     object-fit: cover;
@@ -104,7 +104,7 @@ article[class*=activite-card-special-]{
     background-color: var(--background-card);
 }
 
-/***Partie 1 : Navigation***/
+/***PARTIE 1 : NAVIGATION***/
 /*Style pour la partie "navigation*/
 .nav-accueil{
     display: flex;
@@ -138,7 +138,7 @@ article[class*=activite-card-special-]{
     padding-top: 45px;
 }
 
-/***Partie 2 : Recherche***/
+/***PARTIE 2 : RECHERCHE***/
 /*Style style pour la partie "recherche"*/
 .message-guide{
     margin-top: 35px;
@@ -201,7 +201,7 @@ article[class*=activite-card-special-]{
     margin-left: 2px;
 }
 
-/***Partie 3 : Filtre***/
+/***PARTIE 3 : FILTRE***/
 /*Style pour la partie "filtre"*/
 .perso-icon{
     color: var(--color-first);
@@ -211,6 +211,7 @@ article[class*=activite-card-special-]{
     display: flex;
     list-style-type: none;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .section-filtre li{
@@ -220,6 +221,7 @@ article[class*=activite-card-special-]{
     margin-right: 20px;
     border: 3px solid var(--color-third);
     border-radius: 30px;
+    margin-bottom: 20px;
 }
 
 .section-filtre li a{
@@ -262,7 +264,7 @@ article[class*=activite-card-special-]{
 
 .filtre-remarque{
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .filtre-remarque p{
@@ -285,7 +287,7 @@ article[class*=activite-card-special-]{
     border-radius: 100%;
 }
 
-/***Partie 4 : Hébergement et Populaire***/
+/***PARTIE 4 : HEBERGEMENT ET POPULAIRE***/
 /*Style commun entre la partie "hebergement" et "populaire"*/
 .hebergement-part, 
 .popular-part{
@@ -363,8 +365,10 @@ article[class*=activite-card-special-]{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: space-between;
-    height: 526px;
+}
+
+.popular-part .card-row .popular-card:nth-child(2){
+    margin: 38px 0;
 }
 
 .popular-title{
@@ -392,21 +396,28 @@ article[class*=activite-card-special-]{
     margin-right: 20px;
 }
 
+
 .popular-card .content-description{
-    margin-top: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 0 8px 0;
     width: 160px;
+    height: 100%;
 }
 
-.popular-card .content-description p{
+.popular-card .content-description .description p{
     margin-top: 8px;
 }
 
+/*
 .popular-card .review-stars{
     margin-top: 35px;
 }
-
+*/
 /*Controler la position des images à l'intérieur des CARDS*/
-/*#Hebergement*/
+/*Hebergement*/
 .card-control-1, 
 .card-control-2, 
 .card-control-3{
@@ -432,7 +443,7 @@ article[class*=activite-card-special-]{
     width: 105%;
     height: 105%;
 }
-/*#Populaire*/
+/*Populaire*/
 .card-control-7{
     object-position: 55% 60%;
     width: 110%;
@@ -451,7 +462,7 @@ article[class*=activite-card-special-]{
     height: 110%;
 }
 
-/***Partie 5 : Activités***/
+/***PARTIE 5 : ACTIVITES***/
 /*Style pour la partie "activités"*/
 .activite-separa{
     display: flex;
@@ -462,7 +473,6 @@ article[class*=activite-card-special-]{
 
 .activite-part{
     margin-top: 60px;
-    width: 100%;
 }
 
 .activite-part .card-row{
@@ -511,42 +521,42 @@ article[class*=activite-card-special-] .content-image{
 /*Controler la position des images à l'intérieur des CARDS*/
 /*#Activités*/
 .card-control-10{
-    object-position: -200px -20px;
+    object-position: 60% calc(50% - 20px);
     width: 120%;
     height: 120%;
 }
 
 .card-control-11{
-    object-position: 0px -117px;
+    object-position: 50% 40%;
     width: 100%;
     height: 100%;
 }
 
 .card-control-12{
-    object-position: 0px -20px;
+    object-position: 50% 20%;
     width: 100%;
     height: 100%;
 }
 
 .card-control-13{
-    object-position: -197px -5px;
+    object-position: 57% calc(50% - 5px);
     width: 115%;
     height: 115%;
 }
 
 .card-control-14{
-    object-position: 0px 0px;
+    object-position: 50% 0%;
     width: 100%;
     height: 100%;
 }
 
 .card-control-15{
-    object-position: 0px -11px;
+    object-position: 50% 18%;
     width: 100%;
     height: 100%;
 }
 
-/***Partie 6 : Pied de page***/
+/***PARTIE 6 : PIED DE PAGE***/
 /*Style pour la partie "pied de page"*/
 
 .footer{

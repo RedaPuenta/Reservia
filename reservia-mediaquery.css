@@ -1,0 +1,101 @@
+@media screen and (max-width: 1500px){
+
+    /*Variable*/
+    :root{
+        --size-card-1: 335px;
+    }
+
+    /*Hebergement et Populaire*/
+    .hebergement-popular-separa{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .hebergement-part,
+    .popular-part{
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .hebergement-card a,
+    .popular-card a{
+        box-sizing: border-box;
+        width: 100%;
+        min-width: var(--size-card-1);
+    }
+
+    .hebergement-part article,
+    .popular-part article,
+    .activite-separa{
+        flex: 1;
+    }
+
+    /*Populaire*/
+    .popular-part .card-row{
+        flex-direction: row;
+    }
+
+    .popular-part .card-row .popular-card:nth-child(2){
+        margin: 0px 0px;
+    }
+
+    .popular-part .card-row .popular-card:nth-child(2){
+        margin: 0px 33px;
+    }
+
+    /*Activités*/
+    article[class*=activite-card-special-]{
+        box-sizing: border-box;
+        width: 100%;
+        min-width: calc(var(--size-card-1) / 2);
+    }
+
+    .activite-separa:nth-of-type(1),
+    .activite-separa:nth-of-type(2),
+    .activite-separa:nth-of-type(3){ 
+        margin-right: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 1210px){
+    /*Hebergement*/
+    .hebergement-part .card-row-group{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hebergement-part .card-row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hebergement-part .card-row:first-child{
+        margin-right: 30px;
+    }
+
+    .hebergement-part .card-row:last-child{
+        margin-left: 30px;
+    }
+
+    .hebergement-part .card-row .hebergement-card:nth-child(2){
+        margin: 33px 0px;
+    }
+
+    .hebergement-card a{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+    /*Populaire*/
+    .popular-part .card-row{
+        flex-direction: column;
+    }
+
+    .popular-part .card-row .popular-card:nth-child(2){
+        margin: 38px 0px;
+    }
+}
