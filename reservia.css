@@ -640,11 +640,13 @@ article[class*=activite-card-special-]:hover img[class*=card-control]{
 }
 /*Petite ombre autour du texte (pour le lien dans la partie "Hebergement")*/
 
-.hebergement-part .more-information a{
+.hebergement-part .more-information a,
+.nav-rubrique ul li:last-child a{
     transition: text-shadow 0.5s linear;
 }
 
-.hebergement-part .more-information a:hover{
+.hebergement-part .more-information a:hover,
+.nav-rubrique ul li:last-child a:hover{
     text-shadow: 0px 0px 1px var(--color-first);
 }
 
