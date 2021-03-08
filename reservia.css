@@ -1,18 +1,18 @@
 /***CALQUES DE LA MAQUETTE ET AIDE AU DEVELOPPEMENT (A SUPPRIMER A LA FIN !)***/
 /*
 body{
-    
+  
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 75%;
+    background-position: 50% 0%;
     background-attachment: fixed;
     background-size: cover;
     
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 450px){
     body{
         background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
-        background-position: top;
+        background-position: 50% 0%;
         background-attachment: fixed;
         background-size: cover;
         height: 9000px;
@@ -76,11 +76,13 @@ main{
 img[class*="card-control-"]{
     object-fit: cover;
 }
+
 /*Titre des CARD*/
 .title-card{
     font-weight: bold;
     font-size: 1.05em;
 }
+
 /*Texte des CARD*/
 .content-description p{
     font-size: 0.9em;
@@ -89,6 +91,7 @@ img[class*="card-control-"]{
 .content-description p span{
     font-weight: bold;
 }
+
 /*Etoiles des CARD*/
 .review-stars{
     color: var(--color-first)
@@ -97,6 +100,7 @@ img[class*="card-control-"]{
 .star-less{
     color: rgb(230, 230, 230);
 }
+
 /*Couleur de fond des CARD*/
 .hebergement-card, 
 .popular-card, 
@@ -140,7 +144,7 @@ article[class*=activite-card-special-]{
 
 /***PARTIE 2 : RECHERCHE***/
 /*Style style pour la partie "recherche"*/
-.message-guide{
+.section-search{
     margin-top: 35px;
 }
 
@@ -183,10 +187,15 @@ article[class*=activite-card-special-]{
     font-size: 1.2em;
     height: 57px;
     width: 146px;
+    margin-right: 10px;
 }
 
 .bar-search button span{
     color: white;
+}
+
+.bar-search button span:last-child{
+    display: none;
 }
 
 .logo-info{

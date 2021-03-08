@@ -1,10 +1,4 @@
 @media screen and (max-width: 1500px){
-
-    /*Variable*/
-    :root{
-        --size-card-1: 200px;
-    }
-
     /*Hebergement et Populaire*/
     .hebergement-popular-separa{
         flex-direction: column-reverse;
@@ -20,7 +14,6 @@
     .popular-card a{
         box-sizing: border-box;
         width: 100%;
-        min-width: var(--size-card-1);
     }
 
     .hebergement-part article,
@@ -28,6 +21,26 @@
     .activite-separa{
         flex: 1;
     }
+
+    /*Positionnemement des images*/
+    .card-control-1, 
+    .card-control-2, 
+    .card-control-3{
+        object-position: 0 80%;
+    }
+
+    .card-control-4{
+        object-position: 50% 70%;
+    }
+
+    .card-control-5{
+        object-position: 50% 50%;
+    }
+
+    .card-control-6{
+        object-position: 50% 60%;
+    }
+    /******************************/
 
     /*Populaire*/
     .popular-part .card-row{
@@ -42,7 +55,6 @@
     article[class*=activite-card-special-]{
         box-sizing: border-box;
         width: 100%;
-        min-width: calc(var(--size-card-1) / 2);
     }
 
     .activite-separa:nth-of-type(1),
@@ -51,11 +63,27 @@
         margin-right: 30px;
     }
 
+    /*Positionnemement des images*/
+    .card-control-10,
+    .card-control-11,
+    .card-control-12,
+    .card-control-14{
+        object-position: 50% 50%;
+    }
+
+    .card-control-13{
+        object-position: 50% 100%;
+    }
+
+    .card-control-15{
+        object-position: 50% 50%;
+    }
+    /******************************/
+
     /*Pied de page*/
     .footer .foot-column{
         text-align: center;
     }
-    
 }
 
 @media screen and (max-width: 1230px){
@@ -137,6 +165,20 @@
         margin-top: 4px;
     }
 
+    /*Positionnemement des images*/
+    .card-control-7{
+        object-position: 50% 80%;
+    }
+
+    .card-control-8{
+        object-position: 50% 60%;
+    }
+
+    .card-control-9{
+        object-position: 50% 60%;
+    }
+    /******************************/
+
     /*Activités*/
     .activite-separa:nth-of-type(1),
     .activite-separa:nth-of-type(2),
@@ -168,7 +210,6 @@
     article[class*=activite-card-special-] .content-image{
         height: 140px;
     }
-    
 }
 
 @media screen and (max-width: 880px){
@@ -220,14 +261,83 @@
     .footer{
         flex-direction: column;
     }
-
 }
 
 @media screen and (max-width: 700px){
 
+    /*Générale*/
+    main,
+    header{
+        padding: 0 0;
+    }
+    
+    /*Navigation*/
+    .nav-accueil{
+        flex-direction: column;
+    }
+
+    .nav-logo{
+        padding-top: 30px;
+        padding-left: 3.5%;
+    }
+
+    .nav-rubrique ul li:last-child{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .nav-rubrique ul li:last-child a,
+    .nav-rubrique ul li:last-child a:hover{
+        border: none;
+        padding: 0;
+    }
+
+    .nav-rubrique ul li:first-child,
+    .nav-rubrique ul li:first-child a,
+    .nav-rubrique ul li:nth-child(2),
+    .nav-rubrique ul li:nth-child(2) a{
+        box-sizing: border-box;
+        text-align: center;
+        flex: 1;
+        width: 100%;
+    }
+
+    .nav-rubrique ul li a{
+        padding: 35px 32px 15px 32px;
+        border-bottom: 3px solid var(--color-third);
+    }
+
+    .nav-rubrique ul a:hover{
+        border-top: none;
+        border-bottom: 3px solid var(--color-first);
+        padding-top: 35px;
+    }
+
+    /*Recherche et filtres*/
+    .section-search,
+    .section-filtre{
+        padding: 0 3.5%;
+    }
+
+    /*Hebergement et Populaire*/
+    .hebergement-part, 
+    .popular-part{
+        border-radius: 0px;
+    }
+
     /*Hebergement*/
+    .hebergement-part{
+        margin-top: 10px;
+        background-color: transparent;
+    }
+
     .hebergement-part .card-row-group{
         flex-direction: column;
+    }
+
+    .hebergement-part .card-row{
+        margin-bottom: 20px;
     }
 
     .hebergement-part .card-row:first-child{
@@ -236,6 +346,10 @@
 
     .hebergement-part .card-row:last-child{
         margin-left: 0px;
+    }
+
+    .hebergement-part .card-row .hebergement-card:nth-child(2){
+        margin: 20px 0px;
     }
 
     /*Populaire*/
@@ -271,9 +385,125 @@
         margin: 0;
     }
 
+    .popular-part .card-row .popular-card:nth-child(2){
+        margin: 20px 0px;
+    }
+
     /*Activités*/
+    .activite-part{
+        margin-top: 0px;
+        padding: 0 20px;
+    }
+
     .activite-part .card-row{
         display: flex;
         flex-direction: column;
+    }
+
+    /***EFFET, TRANSITION, ANIMATION***/
+
+    .nav-rubrique ul li:first-child a,
+    .nav-rubrique ul li:nth-child(2) a{
+        transition: box-shadow 0.5s ease-out;
+    }
+
+    .nav-rubrique ul li:first-child a:hover,
+    .nav-rubrique ul li:nth-child(2) a:hover{
+
+        box-shadow: 0px 10px 10px var(--color-third);
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+    /*Navigation*/
+    .nav-rubrique ul li:first-child a,
+    .nav-rubrique ul li:nth-child(2) a{
+        padding: 25px 32px 15px 32px;
+    }
+
+    /*Recherche*/
+    .bar-search button span:first-child{
+        display: none;
+    }
+
+    .bar-search button span:last-child{
+        display: inline-block;
+    }
+
+    /*Filtres*/
+    /*MODIFICATION*/
+
+    /*Hebergement*/
+    /*Positionnemement des images*/
+    .card-control-1, 
+    .card-control-2, 
+    .card-control-3{
+        object-position: 0 50%;
+    }
+
+    .card-control-4{
+        object-position: 0;
+    }
+
+    .card-control-5{
+        object-position: calc(100% - 7px) 50%;
+    }
+
+    .card-control-6{
+        object-position: calc(50% - 5px) 52%;
+    }
+    /******************************/
+
+    /*Populaire*/
+    /*Positionnemement des images*/
+    .card-control-7{
+        object-position: 55% 60%;
+    }
+    
+    .card-control-8{
+        object-position: 60% calc(50% - 5px);
+    }
+    
+    .card-control-9{
+        object-position: calc(50% - 12px) 70%;
+    }
+    /******************************/
+
+    /*Activités*/
+    /*Positionnemement des images*/
+    .card-control-10{
+        object-position: 60% calc(50% - 20px);
+    }
+    
+    .card-control-11{
+        object-position: 50% 40%;
+    }
+    
+    .card-control-12{
+        object-position: 50% 20%;
+    }
+    
+    .card-control-13{
+        object-position: 57% calc(50% - 5px);
+    }
+    
+    .card-control-14{
+        object-position: 50% 0%;
+    }
+    
+    .card-control-15{
+        object-position: 50% 18%;
+    }
+    /******************************/
+
+    /*Pied de page*/
+    .footer{
+        padding: 30px 40px;
+    }
+
+    .footer .foot-column{
+        text-align: left;
+        padding: 20px 0;
     }
 }
