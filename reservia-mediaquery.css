@@ -1,3 +1,11 @@
+body{
+    margin: auto;
+    width: 100%;
+    max-width: 1540px;
+    min-width: 400px;
+}
+
+
 @media screen and (max-width: 1500px){
     /*Hebergement et Populaire*/
     .hebergement-popular-separa{
@@ -423,6 +431,10 @@
     }
 
     /*Recherche*/
+    .bar-search button{
+        width: 65px;
+        border-radius: 20px;
+    }
     .bar-search button span:first-child{
         display: none;
     }
@@ -430,9 +442,6 @@
     .bar-search button span:last-child{
         display: inline-block;
     }
-
-    /*Filtres*/
-    /*MODIFICATION*/
 
     /*Hebergement*/
     /*Positionnemement des images*/
