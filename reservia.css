@@ -16,7 +16,6 @@ body{
         background-attachment: fixed;
         background-size: cover;
         height: 9000px;
-       
     }
 }
 
@@ -29,16 +28,15 @@ body{
     --color-first: #0065FC;      /*Blue*/
     --color-second: #DEEBFF;     /*Blue light*/
     --color-third: #F2F2F2;      /*Grey*/
-    --background-card: white;
+    --background-card: white;    /*White*/
 }
 
 /***STYLE DE FONDATION ET DIRECTIVE GENERALES***/
-
 body{
     font-size: 16px;
 }
 
-:not(i){
+*:not(i){
     font-family: 'Raleway', sans-serif;
 }
 
@@ -73,6 +71,7 @@ main{
 }
 
 /***DIRECTIVES COMMUNES POUR LES CARD***/
+
 /*Image des CARD*/
 img[class*="card-control-"]{
     object-fit: cover;
@@ -318,7 +317,6 @@ article[class*=activite-card-special-]{
 }
 
 /*Style pour la partie "hebergement"*/
-
 .hebergement-part .card-row{
     display: flex;
     justify-content: space-between;
@@ -373,8 +371,34 @@ article[class*=activite-card-special-]{
     color: var(--color-first);
 }
 
-/*Style pour la partie "populaire"*/
+/*Controler la position des images à l'intérieur des CARD de la partie "hebergement"*/
+.card-control-1, 
+.card-control-2, 
+.card-control-3{
+    object-position: 0 50%;
+    width: 105%;
+    height: 100%;
+}
 
+.card-control-4{
+    object-position: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-control-5{
+    object-position: calc(100% - 7px) 50%;
+    width: 105%;
+    height: 105%;
+}
+
+.card-control-6{
+    object-position: calc(50% - 5px) 52%;
+    width: 105%;
+    height: 105%;
+}
+
+/*Style pour la partie "populaire"*/
 .popular-part .card-row{
     display: flex;
     flex-direction: column;
@@ -424,34 +448,7 @@ article[class*=activite-card-special-]{
     margin-top: 8px;
 }
 
-/*Controler la position des images à l'intérieur des CARDS*/
-/*Hebergement*/
-.card-control-1, 
-.card-control-2, 
-.card-control-3{
-    object-position: 0 50%;
-    width: 105%;
-    height: 100%;
-}
-
-.card-control-4{
-    object-position: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.card-control-5{
-    object-position: calc(100% - 7px) 50%;
-    width: 105%;
-    height: 105%;
-}
-
-.card-control-6{
-    object-position: calc(50% - 5px) 52%;
-    width: 105%;
-    height: 105%;
-}
-/*Populaire*/
+/*Controler la position des images à l'intérieur des CARD de la partie "populaire"*/
 .card-control-7{
     object-position: 55% 60%;
     width: 110%;
@@ -526,7 +523,7 @@ article[class*=activite-card-special-] .content-image{
     padding: 20px 17px;
 }
 
-/*Controler la position des images à l'intérieur des CARDS*/
+/*Controler la position des images à l'intérieur des CARD de la partie "activités"*/
 /*#Activités*/
 .card-control-10{
     object-position: 60% calc(50% - 20px);
@@ -566,7 +563,6 @@ article[class*=activite-card-special-] .content-image{
 
 /***PARTIE 6 : PIED DE PAGE***/
 /*Style pour la partie "pied de page"*/
-
 .footer{
     margin-top: 67px;
     display: flex;
@@ -653,8 +649,8 @@ article[class*=activite-card-special-]:hover img[class*=card-control]{
 .popular-more a i:hover{
     transform: translate(5px, -5px);
 }
-/*Petite ombre autour du texte (pour le lien dans la partie "Hebergement")*/
 
+/*Petite ombre autour du texte (pour le lien dans la partie "Hebergement" et "navigation")*/
 .hebergement-part .more-information a,
 .nav-rubrique ul li:last-child a{
     transition: text-shadow 0.5s linear;

@@ -1,3 +1,5 @@
+
+/*Bloquage du document au centre pour les résolution de plus de 1540px et de moins 400px*/
 body{
     margin: auto;
     width: 100%;
@@ -7,7 +9,7 @@ body{
 
 
 @media screen and (max-width: 1500px){
-    /*Hebergement et Populaire*/
+    /***Hebergement et Populaire***/
     .hebergement-popular-separa{
         flex-direction: column-reverse;
     }
@@ -30,7 +32,8 @@ body{
         flex: 1;
     }
 
-    /*Positionnemement des images*/
+    /***Hebergement***/
+    /*Positionnemement des images de la partie "hebergement"*/
     .card-control-1, 
     .card-control-2, 
     .card-control-3{
@@ -48,9 +51,8 @@ body{
     .card-control-6{
         object-position: 50% 60%;
     }
-    /******************************/
-
-    /*Populaire*/
+    
+    /***Populaire***/
     .popular-part .card-row{
         flex-direction: row;
     }
@@ -59,7 +61,7 @@ body{
         margin: 0px 33px;
     }
 
-    /*Activités*/
+    /***Activités***/
     article[class*=activite-card-special-]{
         box-sizing: border-box;
         width: 100%;
@@ -71,7 +73,7 @@ body{
         margin-right: 30px;
     }
 
-    /*Positionnemement des images*/
+    /*Positionnemement des images de la partie "activités*/
     .card-control-10,
     .card-control-11,
     .card-control-12,
@@ -86,9 +88,8 @@ body{
     .card-control-15{
         object-position: 50% 50%;
     }
-    /******************************/
 
-    /*Pied de page*/
+    /***Pied de page***/
     .footer .foot-column{
         text-align: center;
     }
@@ -96,7 +97,7 @@ body{
 
 @media screen and (max-width: 1230px){
     
-    /*Hebergement*/
+    /***Hebergement***/
     .hebergement-part .card-row-group{
         display: flex;
         flex-direction: row;
@@ -125,7 +126,7 @@ body{
         width: 100%;
     }
     
-    /*Populaire*/
+    /***Populaire***/
     .popular-part .card-row{
         flex-direction: column;
         align-items: center;
@@ -173,7 +174,7 @@ body{
         margin-top: 4px;
     }
 
-    /*Positionnemement des images*/
+    /*Positionnemement des images pourla partie "populaire"*/
     .card-control-7{
         object-position: 50% 80%;
     }
@@ -185,9 +186,8 @@ body{
     .card-control-9{
         object-position: 50% 60%;
     }
-    /******************************/
 
-    /*Activités*/
+    /***Activités***/
     .activite-separa:nth-of-type(1),
     .activite-separa:nth-of-type(2),
     .activite-separa:nth-of-type(3){ 
@@ -221,7 +221,7 @@ body{
 }
 
 @media screen and (max-width: 880px){
-    /*Activités*/
+    /***Activités***/
     .activite-part .card-row {
         grid-template-rows: 200px 2fr;
         grid-template-columns: 1fr 1fr;
@@ -265,7 +265,7 @@ body{
         height: 140px;
     }
 
-    /*Pied de page*/
+    /***Pied de page***/
     .footer{
         flex-direction: column;
     }
@@ -273,13 +273,13 @@ body{
 
 @media screen and (max-width: 700px){
 
-    /*Générale*/
+    /***Générale***/
     main,
     header{
         padding: 0 0;
     }
     
-    /*Navigation*/
+    /***Navigation***/
     .nav-accueil{
         flex-direction: column;
     }
@@ -322,19 +322,19 @@ body{
         padding-top: 35px;
     }
 
-    /*Recherche et filtres*/
+    /***Recherche et filtres***/
     .section-search,
     .section-filtre{
         padding: 0 3.5%;
     }
 
-    /*Hebergement et Populaire*/
+    /***Hebergement et Populaire***/
     .hebergement-part, 
     .popular-part{
         border-radius: 0px;
     }
 
-    /*Hebergement*/
+    /***Hebergement***/
     .hebergement-part{
         margin-top: 10px;
         background-color: transparent;
@@ -360,7 +360,7 @@ body{
         margin: 20px 0px;
     }
 
-    /*Populaire*/
+    /***Populaire***/
     .popular-card a{
         flex-direction: row;
         align-items: center;
@@ -371,13 +371,10 @@ body{
         width: 135px;
         height: 100%;
         border-radius: 20px 0px 0 20px;
-        overflow: hidden;
         margin-right: 20px;
     }
     
     .popular-card .content-description{
-        box-sizing: border-box;
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 14px 0 8px 0;
@@ -397,7 +394,7 @@ body{
         margin: 20px 0px;
     }
 
-    /*Activités*/
+    /***Activités***/
     .activite-part{
         margin-top: 0px;
         padding: 0 20px;
@@ -424,13 +421,13 @@ body{
 
 @media screen and (max-width: 500px){
     
-    /*Navigation*/
+    /***Navigation***/
     .nav-rubrique ul li:first-child a,
     .nav-rubrique ul li:nth-child(2) a{
         padding: 25px 32px 15px 32px;
     }
 
-    /*Recherche*/
+    /***Recherche***/
     .bar-search button{
         width: 65px;
         border-radius: 20px;
@@ -443,8 +440,8 @@ body{
         display: inline-block;
     }
 
-    /*Hebergement*/
-    /*Positionnemement des images*/
+    /***Hebergement***/
+    /*Positionnemement des images de la partie "hebergement"*/
     .card-control-1, 
     .card-control-2, 
     .card-control-3{
@@ -462,10 +459,9 @@ body{
     .card-control-6{
         object-position: calc(50% - 5px) 52%;
     }
-    /******************************/
 
-    /*Populaire*/
-    /*Positionnemement des images*/
+    /***Populaire***/
+    /*Positionnemement des images de la partie "populaire*/
     .card-control-7{
         object-position: 55% 60%;
     }
@@ -479,8 +475,8 @@ body{
     }
     /******************************/
 
-    /*Activités*/
-    /*Positionnemement des images*/
+    /***Activités***/
+    /*Positionnemement des images de la partie "activités*/
     .card-control-10{
         object-position: 60% calc(50% - 20px);
     }
@@ -504,9 +500,8 @@ body{
     .card-control-15{
         object-position: 50% 18%;
     }
-    /******************************/
 
-    /*Pied de page*/
+    /***Pied de page***/
     .footer{
         padding: 30px 40px;
     }
