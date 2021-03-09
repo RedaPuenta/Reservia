@@ -1,10 +1,10 @@
 
-/*Bloquage du document au centre pour les résolution de plus de 1540px et de moins 400px*/
+/*Bloquage du document au centre pour les tailles d'écran de plus de 1540px et de moins 320px*/
 body{
     margin: auto;
     width: 100%;
     max-width: 1540px;
-    min-width: 400px;
+    min-width: 320px;
 }
 
 
@@ -428,9 +428,14 @@ body{
     }
 
     /***Recherche***/
+    .bar-search input{
+        width: 100%;
+    }
+
     .bar-search button{
-        width: 65px;
+        width: 100px;
         border-radius: 20px;
+        margin-left: -20px;
     }
     .bar-search button span:first-child{
         display: none;
@@ -510,4 +515,12 @@ body{
         text-align: left;
         padding: 20px 0;
     }
+}
+
+@media screen and (max-width: 350px){
+    /***Générale***/
+    body{
+        font-size: 14px;
+    }
+    
 }

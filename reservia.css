@@ -161,7 +161,6 @@ article[class*=activite-card-special-]{
     margin-top: 20px;
     display: flex;
     align-items: center;
-    margin-right: 10px;
 }
 
 .bar-search input{
