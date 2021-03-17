@@ -1,34 +1,46 @@
-/***CALQUES DE LA MAQUETTE ET AIDE AU DEVELOPPEMENT (A SUPPRIMER A LA FIN !)***/
-/*
-body{
-  
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/maquette/Desktop\ -\ 1.png") no-repeat;
-    background-position: 50% 0%;
-    background-attachment: fixed;
-    background-size: cover;
-    
-}
-
-@media screen and (max-width: 500px){
-    body{
-        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/maquette/iPhone\ 8\ -\ 1.png")  no-repeat;
-        background-position: 50% 0%;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 9000px;
-    }
-}
-
-*{
-    border: none black 1px solid;
-}
-*/
 /***VARIABLES***/
 :root{
     --color-first: #0065FC;      /*Blue*/
     --color-second: #DEEBFF;     /*Blue light*/
     --color-third: #F2F2F2;      /*Grey*/
     --background-card: white;    /*White*/
+}
+
+/***Police d'écriture***/
+@font-face {
+    font-family: 'Raleway';
+    src: url('typo/Raleway-Medium.eot');
+    src: url('typo/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+        url('typo/Raleway-Medium.woff2') format('woff2'),
+        url('typo/Raleway-Medium.woff') format('woff'),
+        url('typo/Raleway-Medium.ttf') format('truetype'),
+        url('typo/Raleway-Medium.svg#Raleway-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('typo/Raleway-Bold.eot');
+    src: url('typo/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+        url('typo/Raleway-Bold.woff2') format('woff2'),
+        url('typo/Raleway-Bold.woff') format('woff'),
+        url('typo/Raleway-Bold.ttf') format('truetype'),
+        url('typo/Raleway-Bold.svg#Raleway-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('typo/Raleway-Regular.eot');
+    src: url('typo/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('typo/Raleway-Regular.woff2') format('woff2'),
+        url('typo/Raleway-Regular.woff') format('woff'),
+        url('typo/Raleway-Regular.ttf') format('truetype'),
+        url('typo/Raleway-Regular.svg#Raleway-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
 /***STYLE DE FONDATION ET DIRECTIVE GENERALES***/

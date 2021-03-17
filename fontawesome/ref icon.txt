@@ -1,9 +1,0 @@
-<i class="fas fa-heart"></i>                 ---> Coeur
-<i class="fas fa-dog"></i>                   ----> Chien
-<i class="fas fa-info"></i>                  ----> Info
-<i class="fas fa-money-bill-wave"></i>       ----> Billet
-<i class="fas fa-child"></i>                 -----> Humain
-<i class="fas fa-map-marker-alt"></i>        ----> Itinéraire
-<i class="fas fa-star"></i>                  -----> Etoile
-<i class="fas fa-chart-line"></i>            ----> Graphique
-<i class="fas fa-search"></i>                -----> Recherche

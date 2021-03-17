@@ -282,6 +282,7 @@ body{
     /***Navigation***/
     .nav-accueil{
         flex-direction: column;
+        position: relative;
     }
 
     .nav-logo{
