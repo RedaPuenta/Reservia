@@ -322,9 +322,12 @@ body{
     }
 
     /***Recherche et filtres***/
-    .section-search,
     .section-filtre{
         padding: 0 3.5%;
+    }
+
+    .section-search{
+        padding: 0 4.5% 0 3.5%;
     }
 
     /***Hebergement et Populaire***/
@@ -419,10 +422,6 @@ body{
 }
 
 @media screen and (max-width: 500px){
-    
-    body{
-        font-size: 14px;
-    }
 
     /***Navigation***/
     .nav-rubrique ul li:first-child a,
@@ -433,11 +432,6 @@ body{
     /***Recherche***/
     .bar-search input{
         width: 100%;
-    }
-
-    /***Filtres***/
-    .section-filtre li p{
-        padding: 0 10px;
     }
     
     .bar-search button{
@@ -451,6 +445,20 @@ body{
 
     .bar-search button span:last-child{
         display: inline-block;
+    }
+
+    /***Filtres***/
+    .section-filtre li p{
+        padding: 0 15px;
+        font-size: 17px;
+    }
+
+    .section-filtre li{
+        margin-right: 10px;
+    }
+
+    .filtre-remarque p{
+        font-size: 1em;
     }
 
     /***Hebergement et Populaire***/
